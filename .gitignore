@@ -1,0 +1,4 @@
+*.txt
+*.csv
+download_repos_old.py
+*__pycache__/
