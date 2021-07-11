@@ -11,7 +11,7 @@ Permite descargar un grupo de subcarpetas de un repositorio, o bien descargar un
 
 - **manual**: permite descargar el directorio de una actividad o tarea, de un alumno específico.
     - ejecución: `python repos_downloader.py "actividad" "alumno"`.
-    - ejemplo: `python repos_downloader.py AF6 ChrisKlempau`
+    - ejemplo: `python repos_downloader.py -i AF6 ChrisKlempau`
 
 
 Ojo: las descargas siempre se harán en `nombre_actividad/`, por ejemplo `T2/`, a partir de la ubicación del archivo _python_. **La carpeta NO debe existir antes**. 
