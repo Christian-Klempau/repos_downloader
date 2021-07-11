@@ -39,3 +39,16 @@ Y después:
 └── repos_downloader.py
 ```
 
+El archivo `.csv`, debiera verse algo así:
+
+```
+corrector1,alumno1
+corrector1,alumno2
+corrector1,alumno3
+corrector2,alumno1
+corrector3,alumno1
+corrector3,alumno2
+.
+.
+.
+```
