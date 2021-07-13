@@ -37,12 +37,13 @@ def modo_manual(actividad_especifica, alumno):
 
 
 if __name__ == "__main__":
-    if(len(sys.argv) == 4 and sys.argv[1] == "-i"):
+    if(len(sys.argv) == 3):
         print("Modo manual")
         # argumentos: actividad y alumno
-        modo_manual(sys.argv[2], sys.argv[3])
+        modo_manual(sys.argv[1], sys.argv[2])
 
     elif(len(sys.argv) == 1):
+        # toma las variables globales como parámetros, y descarga todos los elementos del CSV
         print("Modo automático")
         modo_automatico()
     else:
