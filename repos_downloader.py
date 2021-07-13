@@ -24,7 +24,7 @@ def modo_automatico():
 
     # Itera sobre los alumnos y correctores, para agregar a la carpeta sólo las subcarpetas
     for linea in datos:
-        corr, alumno = (linea[0], linea[1])
+        alumno, corr = (linea[0], linea[1])
         if(corr == corrector):
             os.system(f"cd {actividad} && git sparse-checkout add {alumno}")
 

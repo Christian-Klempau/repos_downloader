@@ -42,12 +42,13 @@ Y después:
 El archivo `.csv`, debiera verse algo así:
 
 ```
-corrector1,alumno1
-corrector1,alumno2
-corrector1,alumno3
-corrector2,alumno1
-corrector3,alumno1
-corrector3,alumno2
+GithubAlumno,Corrector
+alumno1,corrector1
+alumno2,corrector1
+alumno3,corrector1
+alumno1,corrector2
+alumno1,corrector3
+alumno2,corrector3
 .
 .
 .
