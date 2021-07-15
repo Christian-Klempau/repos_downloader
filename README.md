@@ -53,3 +53,14 @@ alumno2,corrector3
 .
 .
 ```
+
+### Posibles errores:
+
+Error de consola: `failed to initialize sparce-checkout`
+Se debe a tener una versión de `git` antigua. Se actualiza con:
+
+```
+Windows: git update-git-for-windows
+MacOS: brew upgrade git
+Linux: sudo apt-get install git
+```
