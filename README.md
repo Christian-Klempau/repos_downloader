@@ -10,7 +10,7 @@ Permite descargar un grupo de subcarpetas de un repositorio, o bien descargar un
 
 
 - **manual**: permite descargar el directorio de una actividad o tarea, de un alumno específico.
-    - ejecución: `python repos_downloader.py "actividad" "alumno"`.
+    - ejecución: `python repos_downloader.py "actividad" "alumno"` (o puedes abrir la carpeta en VSCode y correr el `.py`)
     - ejemplo: `python repos_downloader.py AF6 AlumnoChris`
 
 
