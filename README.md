@@ -4,13 +4,13 @@ Permite descargar un grupo de subcarpetas de un repositorio, o bien descargar un
 ## Modos de uso
 - **automático**: descarga todas las carpetas, de los alumnos asociados a un corrector, para una actividad o tarea.
 
-    - ejecución: `python repos_downloader.py`
+    - ejecución: `python repos_downloader.py`  (o puedes abrir la carpeta en VSCode y correr el `.py`)
     - consideraciones: líneas de `6: path_csv`, `8: corrector` y `10: actividad` (ASX, AFX, TX) deben cambiarse correctamente.
 
 
 
 - **manual**: permite descargar el directorio de una actividad o tarea, de un alumno específico.
-    - ejecución: `python repos_downloader.py "actividad" "alumno"` (o puedes abrir la carpeta en VSCode y correr el `.py`)
+    - ejecución: `python repos_downloader.py "actividad" "alumno"`
     - ejemplo: `python repos_downloader.py AF6 AlumnoChris`
 
 
