@@ -3,11 +3,11 @@ import sys
 
 # ---- Parámetros cambiables ----
 # Path al archivo CSV que contiene la información de los correctores
-path_csv = "T3.csv"
+path_csv = "datos.csv"
 # Tu nombre/usuario en el archivo CSV
-corrector = "knight-who-say-ni"
+corrector = "Chris"
 # Subdirectorio a descargar: T3, AF6, AS2 ...
-actividad = "T3"
+actividad = "AF6"
 
 # URL absoluta al repositorio, no debería ser necesario cambiarla
 repo_base = r"https://github.com/IIC2233/"
@@ -26,7 +26,6 @@ def modo_automatico():
     for linea in datos:
         alumno, corr = (linea[0], linea[1])
         if(corr == corrector):
-            print("-"*10, "ALUMNO:", alumno, "-"*10)
             os.system(f"cd {actividad} && git sparse-checkout add {alumno}")
 
 
