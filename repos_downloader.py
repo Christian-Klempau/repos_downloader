@@ -1,13 +1,27 @@
 import os
-import sys
+import argparse
+import re
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-p", "--path", help="Ruta del archivo csv", type=str, required=True)
+parser.add_argument(
+    "-c", "--corrector", help="Nombre/usuario del corrector", type=str, required=True
+)
+parser.add_argument("-a", "--actividad", help="Nombre de la actividad", type=str, required=True)
+parser.add_argument(
+    "-m", "--modo", help="[A] automático, [M] manual", type=str, nargs='?', default="A"
+)
+parser.add_argument("-e", "--estudiante", help="Nickname estudiante", type=str, nargs='?')
+args = parser.parse_args()
+
 
 # ---- Parámetros cambiables ----
 # Path al archivo CSV que contiene la información de los correctores
-path_csv = "datos.csv"
+path_csv = args.path
 # Tu nombre/usuario en el archivo CSV
-corrector = "Chris"
+corrector = args.corrector
 # Subdirectorio a descargar: T3, AF6, AS2 ...
-actividad = "AF6"
+actividad = args.actividad
 
 # URL absoluta al repositorio, no debería ser necesario cambiarla
 repo_base = r"https://github.com/IIC2233/"
@@ -37,12 +51,13 @@ def modo_manual(actividad_especifica, alumno):
 
 
 if __name__ == "__main__":
-    if(len(sys.argv) == 3):
+    if(re.search("[m]", args.modo, re.IGNORECASE)):
         print("Modo manual")
         # argumentos: actividad y alumno
-        modo_manual(sys.argv[1], sys.argv[2])
+        assert isinstance(args.estudiante, str)
+        modo_manual(args.actividad, args.estudiante)
 
-    elif(len(sys.argv) == 1):
+    elif(re.search("[a]", args.modo, re.IGNORECASE)):
         # toma las variables globales como parámetros, y descarga todos los elementos del CSV
         print("Modo automático")
         modo_automatico()
