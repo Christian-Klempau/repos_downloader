@@ -3,9 +3,9 @@ import argparse
 import re
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-p", "--path", help="Ruta del archivo csv", type=str, required=True)
+parser.add_argument("-p", "--path", help="Ruta del archivo csv", type=str, nargs='?')
 parser.add_argument(
-    "-c", "--corrector", help="Nombre/usuario del corrector", type=str, required=True
+    "-c", "--corrector", help="Nombre/usuario del corrector", type=str, nargs='?'
 )
 parser.add_argument("-a", "--actividad", help="Nombre de la actividad", type=str, required=True)
 parser.add_argument(
@@ -60,6 +60,8 @@ if __name__ == "__main__":
     elif(re.search("[a]", args.modo, re.IGNORECASE)):
         # toma las variables globales como parámetros, y descarga todos los elementos del CSV
         print("Modo automático")
+        assert isinstance(args.path, str)
+        assert isinstance(args.corrector, str)
         modo_automatico()
     else:
         print("ERROR: los argumentos no son correctos.")
