@@ -12,7 +12,9 @@ Permite descargar un grupo de subcarpetas de un repositorio, o bien descargar un
 
 
 
-- **manual**: <span style="color: red;"> FIX ME - argparser </span> 
+- **manual**: descarga una actividad/tarea específica de algún alumne.
+
+    - ejecución: `python repos_downloader.py -m M -e {alumne} -a {actividad}` donde alumne es el usuario GitHub correspondiente, y actividad es `AFx, ASx, Tx`.
 
 
 Ojo: las descargas siempre se harán en `nombre_actividad/`, por ejemplo `T2/`, a partir de la ubicación del archivo _python_. **La carpeta NO debe existir antes**. 
