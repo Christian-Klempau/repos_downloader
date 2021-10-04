@@ -1,7 +1,7 @@
 # repos_downloader
 Permite descargar un grupo de subcarpetas de un repositorio, o bien descargar un directorio arbitrario desde cualquier carpeta.
 
-- `python reposdownloader.py -h`: despliega información útil sobre el modo de uso.
+- `python repos_downloader.py -h`: despliega información útil sobre el modo de uso.
 
 ## Modos de uso
 - **automático**: descarga todas las carpetas, de los alumnos asociados a un corrector, para una actividad o tarea.
