@@ -1,6 +1,8 @@
 # repos_downloader
 Permite descargar un grupo de subcarpetas de un repositorio, o bien descargar un directorio arbitrario desde cualquier carpeta.
 
+- `python reposdownloader.py -h`: despliega información útil sobre el modo de uso.
+
 ## Modos de uso
 - **automático**: descarga todas las carpetas, de los alumnos asociados a un corrector, para una actividad o tarea.
 
@@ -16,7 +18,7 @@ Permite descargar un grupo de subcarpetas de un repositorio, o bien descargar un
 
     - ejecución: `python repos_downloader.py -m M -e {alumne} -a {actividad}` donde alumne es el usuario GitHub correspondiente, y actividad es `AFx, ASx, Tx`.
 
-
+## Consideraciones
 Ojo: las descargas siempre se harán en `nombre_actividad/`, por ejemplo `T2/`, a partir de la ubicación del archivo _python_. **La carpeta NO debe existir antes**. 
 Por ejemplo, antes de una ejecución de **automático** el directorio se vería así:
 
@@ -57,7 +59,7 @@ alumno2,corrector3
 .
 ```
 
-### Posibles errores:
+### Posibles errores
 
 Error de consola: `failed to initialize sparce-checkout`
 Se debe a tener una versión de `git` antigua. Se actualiza con:
