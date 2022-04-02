@@ -11,8 +11,13 @@ Permite descargar un grupo de subcarpetas de un repositorio, o bien descargar un
          - `-a = NOMBRE_ACTIVIDAD`
          - `-c = NOMBRE_CORRECTOR` (según csv y tipo `str`)
          - `-p = PATH_CSV`
+  
+<br>
 
+- **forzado**: funciona igual que automático, solo que asegura el funcionamiento del script al no usar `git-sparse`. Es algo más lento. Debes agregar el flag `-m F` al llamar al script.
+    - - ejecución: `python repos_downloader.py -p AF3.csv -c 'Chris Klempau' -a AF3 -m F`
 
+<br>
 
 - **manual**: descarga una actividad/tarea específica de algún alumne.
 
@@ -69,3 +74,7 @@ Windows: git update-git-for-windows
 MacOS: brew upgrade git
 Linux: sudo apt-get install git
 ```
+
+Si a pesar de lo anterior no te funciona, trata de utilizar el **modo forzado** para descargar las carpetas.
+
+Si el script tiene problemas encontrando tu nombre en el csv, prueba escribiendo el corrector sin cremillas, es decir: `ChrisKlempau` en vez de `'ChrisKlempau'`. Ojo que si tu nombre tiene espacios las cremillas **deberían** ser necesarias.

@@ -2,3 +2,7 @@
 *.csv
 download_repos_old.py
 *__pycache__/
+
+# ignorar carpetas de tareas y actividades
+A*/
+T*/
